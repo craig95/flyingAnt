@@ -1,12 +1,9 @@
 /**
- *	@file singlePlyerGame.h
- *	@class Player
+ *	@file ogre.h
+ *	@class Ogre
  *	@author Craig van Heerden U15029779, Dedre Olwage U15015239
  *
  *	@brief A class to easily setup and start a single player game.
- *
- *	@section Description
- * 	This class creates all the units. It also loads the map and handels the game loop.
  *
  */
 

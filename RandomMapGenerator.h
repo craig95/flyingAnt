@@ -1,3 +1,12 @@
+/**
+ *	@file ogre.h
+ *	@class Ogre
+ *	@author Craig van Heerden U15029779, Dedre Olwage U15015239
+ *
+ *	@brief A class fto generate a random map.
+ *
+ */
+
 #ifndef RANDOMMAPGENERATOR_H
 #define RANDOMMAPGENERATOR_H
 
