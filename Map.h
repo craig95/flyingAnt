@@ -14,6 +14,8 @@
 #define MAP_H
 #include "subject.h"
 
+
+
 class Map : public Subject
 {
 private:
@@ -35,13 +37,7 @@ private:
 
 
 public: //complete
-      /**
-      *	The default constructor.
-      */
-	  Map ();
-    /**
-    *	The destructor.
-    */
+	Map ();
     ~Map();
 
 		/**

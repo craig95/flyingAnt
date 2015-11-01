@@ -1,11 +1,3 @@
-/**
-*	@file UnitImp.h
-*	@class UnitImp
-*	@author Craig van Heerden U15029779, Dedre Olwage U15015239
-*
-*	@brief The implementation of unit. The implementation participant of bridge.
-*/
-
 #ifndef UNITIMP_H
 #define UNITIMP_H
 

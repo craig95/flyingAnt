@@ -21,6 +21,9 @@
 class Player: public UnitImp
 {
 	public:
+		Player() {}
+	 ~Player(){}
+
 		 /**
 		*	This function creates calls another function in it to determine whether  a player or mob can move or not.
 		*	@param Four integers, initial x- and y-coordinate, and the x- and y-coordinate the player/mob wants to move to.

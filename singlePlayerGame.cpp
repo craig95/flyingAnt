@@ -6,42 +6,42 @@ int SinglePlayerGame :: amountDamage(int &damage,char ch1, char ch2)
 	{
 		case 'M' : if( ch2 == 'E')
 				{
-					cout << "MAGE attacks ELEMENTAL!" << endl;
+					cout << YELLOW << "MAGE attacks ELEMENTAL!" << RESET << endl;
 					damage = 5;
 					return 4;
 					break;
 				}
 				else if(ch2 == 'O')
 				{
-					cout << "MAGE attacks OGRE!" << endl;
+					cout << YELLOW << "MAGE attacks OGRE!" << RESET << endl;
 					damage = 5*2;
 					return 5/2;
 					break;
 				}
 				else if(ch2 == 'G')
 				{
-					cout << "MAGE attacks GOBLIN!" << endl;
+					cout << YELLOW << "MAGE attacks GOBLIN!" << RESET << endl;
 					damage = 5/2;
 					return 12;
 					break;
 				}
 		case 'S' :if( ch2 == 'E')
 				{
-					cout << "SOLDIER attacks ELEMENTAL!" << endl;
+					cout << RED << "SOLDIER attacks ELEMENTAL!" << RESET << endl;
 					damage = 8/2;
 					return 4;
 					break;
 				}
 				else if(ch2 == 'O')
 				{
-					cout << "MSOLDIER attacks OGRE!" << endl;
+					cout << RED << "SOLDIER attacks OGRE!" << RESET << endl;
 					damage = 8;
 					return 5;
 					break;
 				}
 				else if(ch2 == 'G')
 				{
-					cout << "SOLDIER attacks GOBLIN!" << endl;
+					cout << RED << "SOLDIER attacks GOBLIN!" << RESET << endl;
 					damage = 8;
 					return 12/2;
 					break;
@@ -49,21 +49,21 @@ int SinglePlayerGame :: amountDamage(int &damage,char ch1, char ch2)
 
 		case 'T': if( ch2 == 'E')
 				{
-					cout << "THIEF attacks ELEMENTAL!" << endl;
+					cout << BLUE << "THIEF attacks ELEMENTAL!" << RESET << endl;
 					damage = 10*2;
 					return 4/2;
 					break;
 				}
 				else if(ch2 == 'O')
 				{
-					cout << "THIEF attacks OGRE!" << endl;
+					cout << BLUE << "THIEF attacks OGRE!" << RESET << endl;
 					damage = 10/2;
 					return 5;
 					break;
 				}
 				else if(ch2 == 'G')
 				{
-					cout << "THIEF attacks GOBLIN!" << endl;
+					cout << BLUE << "THIEF attacks GOBLIN!" << RESET << endl;
 					damage = 10;
 					return 12;
 					break;
@@ -83,6 +83,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 	cout << endl;
 	cout << RED << "You are the master of light who needs to defend the world from darkness! \nChoose your character type: \n1. Mage \n2. Thief \n3. Soldier\n";
 	cin >> force;
+	
+	cout << RESET ;
 
 	while(!validChoice)
 	{
@@ -93,8 +95,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 			Unit * player = troop-> createPlayer();
 			persons.push_back(player);
 
-			cout << "\nYour Character: ";
-			cout << player->getDescription()<< endl;
+			cout << YELLOW << "\nYour Character: ";
+			cout << YELLOW <<  player->getDescription()<< RESET << endl;
 			validChoice = true;
 		}else if(force == 2)//The player will be a soldier (Creates a theif)
 		{
@@ -102,8 +104,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 			Unit * player = troop-> createPlayer();
 			persons.push_back(player);
 
-			cout << "\nOYour Character: ";
-			cout << player->getDescription()<< endl;
+			cout << RED << "\nOYour Character: ";
+			cout << RED << player->getDescription()<< RESET << endl;
 			validChoice = true;
 		}else if(force == 3)//The player will be a thief (Creates a soldier)
 		{
@@ -111,12 +113,13 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 			Unit * player = troop-> createPlayer();
 			persons.push_back(player);
 
-			cout << "\nYour Character: ";
-			cout << player->getDescription()<< endl;
+			cout << BLUE << "\nYour Character: ";
+			cout << BLUE << player->getDescription()<< RESET << endl;
 			validChoice = true;
 		}else {
-			cout << "\nInvalid choice! \n\nChoose an option: \n1. Mage \n2. Thief\n3. Soldier \n" << endl;
+			cout << CYAN << "\nInvalid choice! \n\nChoose an option: \n1. Mage \n2. Thief\n3. Soldier \n" << endl;
 			cin >> force;
+			cout << RESET;
 		}
 
 	}
@@ -138,7 +141,7 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 		numberOfEnemys = rand() % 4 + 1;
 
 		//Tell the user the type and ammount of enemies
-		cout << "\nThe master of dark forces senses your presence! He will summon " << numberOfEnemys << " elemental(s)" << endl;
+		cout << BLUE << "\nThe master of dark forces senses your presence! He will summon " << numberOfEnemys << " elemental(s)" << endl;
 		//creates the factory
 		UnitFactory * evil= new MagicFactory;
 
@@ -147,8 +150,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 		monsters.push_back(monster);
 
 		//cout the enemy description
-		cout << "The Enemy: ";
-		cout << monster->getDescription()<< endl;
+		cout << RED << "The Enemy: ";
+		cout << monster->getDescription()<< RESET << endl;
 
 		//clones the first to make the other enemy
 		for(int num = 1; num < numberOfEnemys; num++)
@@ -165,7 +168,7 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 		numberOfEnemys = rand() % 4 +1;
 
 		//Tell the user the type and ammount of enemies
-		cout << "\n\nThe master of dark forces senses your presence! He will summon " << numberOfEnemys << " goblin(s)" << endl;
+		cout << MAGENTA << "\n\nThe master of dark forces senses your presence! He will summon " << numberOfEnemys << " goblin(s)" << endl;
 		//creates the factory
 		UnitFactory * evil= new PiercingFactory;
 
@@ -174,8 +177,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 		monsters.push_back(monster);
 
 		//cout the enemy description
-		cout << "\nThe Enemy: ";
-		cout << monster->getDescription()<< endl;
+		cout << MAGENTA << "\nThe Enemy: ";
+		cout << monster->getDescription()<< RESET << endl;
 
 		//clones the first to make the other enemy
 		for(int num = 1; num < numberOfEnemys; num++)
@@ -191,7 +194,7 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 		numberOfEnemys = rand() % 4 +1;
 
 		//Tell the user the type and ammount of enemies
-		cout << "\n\nThe master of dark forces senses your presence! He will summon " << numberOfEnemys << " ogre(s)" << endl;
+		cout << CYAN << "\n\nThe master of dark forces senses your presence! He will summon " << numberOfEnemys << " ogre(s)" << endl;
 		//creates the factory
 		UnitFactory * evil= new BludgeoningFactory;
 
@@ -200,8 +203,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 		monsters.push_back(monster);
 
 		//cout the enemy description
-		cout << "\nThe Enemy: ";
-		cout << monster->getDescription()<< endl;
+		cout << CYAN <<  "\nThe Enemy: ";
+		cout << monster->getDescription()<< RESET << endl;
 
 		//clones the first to make the other enemy
 		for(int num = 1; num < numberOfEnemys; num++)
@@ -216,7 +219,7 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 	char name[SIZE];
 	char * filename= name;
 
-	cout << "\nEnter the file name of the map you wish to load: ";
+	cout << GREEN <<  "\nEnter the file name of the map you wish to load \nOR type 'r' to generate a random map:";
 	cin >> name;
 
 	//creates the map
@@ -229,7 +232,7 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 
 	adapterA = new Adapter(map,persons[0]);
 
-	cout<< "\nMap Loading..." << endl;
+	cout<< GREEN << "\nMap Loading..." << endl;
 
 	int ran, ran2,ran3, ran4;
 	bool set = false;
@@ -239,15 +242,17 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 	ran3 = rand() %  map->getXLength();
 	ran4 =  rand() % map->getYLength();
 
+	
 	while(!set)
 	{
-
+		//cout << ran3 << " " << ran4  <<endl;
 		ran3 = rand() %  map->getXLength();
 		ran4 =  rand() % map->getYLength();
-		set = adapterA->Move(ran,ran2,ran3,ran4);
+		set = adapterA->Move(0,0,ran3,ran4);
 	}
 
-	adapterA->setCell(ran,ran2,ran3,ran4,persons[0]->getDescription());
+	
+	adapterA->setCell(0,0,ran3,ran4,persons[0]->getDescription());
 
 	persons[0]->yourPosition(ran3,ran4);
 
@@ -273,6 +278,8 @@ void SinglePlayerGame :: setupSinglePlayerGame()
 			}
 		}
 	}
+	
+	
 	map->printMap();
 
 }
@@ -287,7 +294,7 @@ void SinglePlayerGame :: startGame()
 		validDirection = false;
 
 		while (validDirection==false){
-			cout << "Use W A S or D to move: ";//Ask the user which direction he would like to move to
+			cout << GREEN << "Use W A S or D to move: ";//Ask the user which direction he would like to move to
 			cin >> direction;
 			direction = tolower(direction);
 
@@ -324,12 +331,13 @@ void SinglePlayerGame :: startGame()
 				default:	break;
 			}
 			map->printMap();
+			cout << RESET;
 
 			//Test if the player is next to another unit, if it is it will attempt to attack it.
 			char tempCell = map->testCell(persons[0]->getX(),persons[0]->getY());
 			Unit * unitToAttack;
 			if (tempCell!='c') {
-				cout << "Enemy is in sight! Attacking!" << endl;
+				cout << RED << "Enemy is in sight! Attacking!" << RESET <<  endl;
 				switch (tempCell) {
 					case 'a':	unitToAttack = findUnitAtCords(persons[0]->getX()-1,persons[0]->getY());
 										break;
@@ -360,7 +368,7 @@ void SinglePlayerGame :: startGame()
 				int damageToEnemy=0;
 				int damageToPlayer = amountDamage(damageToEnemy,persons[0]->getDescription(),unitToAttack->getDescription());
 
-				cout << "You deal " << damageToEnemy << " damage. Remaining Enemy Health: ";
+				cout << WHITE << "You deal " << damageToEnemy << " damage. Remaining Enemy Health: ";
 				if (unitToAttack->getHealth()-damageToEnemy>0) {
 					cout << unitToAttack->getHealth()-damageToEnemy << endl;
 				}
@@ -374,11 +382,11 @@ void SinglePlayerGame :: startGame()
 
 				persons[0]->setNextInChain(0);
 				persons[0]->takeDamage(damageToPlayer);
-				cout << "You take " << damageToPlayer << " damage. Remaining Health: " << persons[0]->getHealth() << endl;
+				cout << RED << "You take " << damageToPlayer << " damage. Remaining Health: " << persons[0]->getHealth() << RESET << endl;
 
 			}
 
-			cout << "The dark forces are moving are moving!" << endl;
+			cout << BLUE << "The dark forces are moving are moving!" << RESET <<  endl;
 			map->notify(map);
 			map->printMap();
 
@@ -386,9 +394,9 @@ void SinglePlayerGame :: startGame()
 	}
 
 	if (persons[0]->getHealth()<1){
-		cout << "\nYou were sadly defeated. The dark forces are taking over." << endl;
+		cout << RED << "\nYou were sadly defeated. The dark forces are taking over." << RESET << endl;
 	} else {
-		cout << "You Win! The darkness has been defeated!" << endl;
+		cout << YELLOW <<  "You Win! The darkness has been defeated!" << RESET << endl;
 	}
 }
 

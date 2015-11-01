@@ -16,6 +16,15 @@
 #include <cstdlib>
 #include "UnitImp.h"
 
+#define RED "\033[31m"
+#define RESET "\033[0m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define BLUE "\033[34m"
+#define MAGENTA "\035[35m"
+#define CYAN "\036[36m"
+#define WHITE "\033[37m"
+
 using namespace std;
 
 class Unit
@@ -154,11 +163,6 @@ protected:
 		*/
 	void setDescription(char pDescription);
 
-	/**
-		@The next unit in the chain of responsibility.
-	*/
-	Unit* nextInChain;
-
 private:
 		//AbstractFactory and Prototype
 
@@ -188,6 +192,15 @@ private:
 	int initY; ///Your army y position
 
 	//UnitImp * unitImp;
+
+protected:
+		/**
+			@brief The next unit in the chain of responsibility.
+		*/
+	Unit* nextInChain;
+
+
+
 };
 
 #endif

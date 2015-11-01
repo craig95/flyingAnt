@@ -32,6 +32,13 @@ public:	//AbstractFactory and Prototype
 	Unit* clone();
 
 		/**
+		*	This function "attacks" a mob of type Unit.
+		*	@param The Mob of type Unit this thief will be attacking (afflicting damage to).
+		*	@return Nothing is returned (function is void).
+		*/
+	//virtual void attack(Unit&);
+
+		/**
 		*	This function lets this Thief player of type Unit take damage to itself.
 		*	@param An integer indicating how much damage should be taken by the Thief player (how much the attribute Health will be decremented by).
 		*	@return Nothing is returned (function is void).

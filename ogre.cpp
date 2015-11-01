@@ -27,7 +27,7 @@ void Ogre :: takeDamage(int damage)
 		this->setHealth(this->getHealth()-damage);
 	else{
 		this->setHealth(0);
-		cout << "You have killed a Ogre! Remaining damage sent to next Ogre!" << endl;
+		cout << WHITE << "You have killed a Ogre! Remaining damage sent to next Ogre!" << endl;
 		if (nextInChain != 0)
 			nextInChain->takeDamage(damage-this->getHealth());
 	}

@@ -27,7 +27,7 @@ void Goblin :: takeDamage(int damage)
 		this->setHealth(this->getHealth()-damage);
 	else{
 		this->setHealth(0);
-		cout << "You have killed a Goblin! Remaining damage sent to next goblin!" << endl;
+		cout << WHITE << "You have killed a Goblin! Remaining damage sent to next goblin!" << endl;
 		if (nextInChain != 0)
 			nextInChain->takeDamage(damage-this->getHealth());
 	}

@@ -2,7 +2,7 @@
 *	@file unitfactory.h
 *	@class UnitFactory
 *	@author Craig van Heerden U15029779, Dedre Olwage U15015239
-*
+*	
 *	@brief An abstract class for  creating players/mobs of type Unit.
 *
 *	@section Description
@@ -31,7 +31,7 @@ public:
 		*/
 	virtual Unit* createMob()=0;
 
-
+	
 };
 
 

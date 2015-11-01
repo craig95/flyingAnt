@@ -27,9 +27,10 @@ void Elemental :: takeDamage(int damage)
 	if (this->getHealth()-damage > 0)
 		this->setHealth(this->getHealth()-damage);
 	else{
-		this->setHealth(0);
-		cout << "You have killed a Elemental! Remaining damage sent to next elemental!" << endl;
 		if (nextInChain != 0)
 			nextInChain->takeDamage(damage-this->getHealth());
+		this->setHealth(0);
+		cout << WHITE << "You have killed an Elemental! Remaining damage sent to next elemental!" << endl;
+		
 	}
 }

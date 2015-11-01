@@ -4,6 +4,7 @@
 #include <string>
 #include <string.h>
 #include <cstdlib>
+#include "RandomMapGenerator.h"
 
 using namespace std;
 
@@ -34,32 +35,61 @@ void Map::setMap()
     {
         MapContents[i] = new char[mapSizeY];
     }
-    ifstream myReadFile;
-    myReadFile.open(FileLocation);
-    string output;
-    int count = 0;
-    if (myReadFile.is_open())
+    
+    
+    if(*FileLocation != 'r')
     {
-        while (getline(myReadFile, output))
-        {
-            strcpy(MapContents[count], output.c_str());
-            count++;
-        }
+	    ifstream myReadFile;
+	    myReadFile.open(FileLocation);
+	    string output;
+	    int count = 0;
+	    if (myReadFile.is_open())
+	    {
+		while (getline(myReadFile, output))
+		{
+		    strcpy(MapContents[count], output.c_str());
+		    count++;
+		}
+	    }
+	    myReadFile.close();
     }
-    myReadFile.close();
+    else
+    {
+	RandomMapGenerator * newMap = new RandomMapGenerator();
+	FileLocation = newMap ->GenerateMap(mapSizeX,mapSizeY);
+	    
+	ifstream myReadFile;
+	myReadFile.open(FileLocation);
+	string output;
+	int count = 0;
+	if (myReadFile.is_open())
+	{
+		while (getline(myReadFile, output))
+		{
+		    strcpy(MapContents[count], output.c_str());
+		    count++;
+		}
+		myReadFile.close();
+	}
+	    
+    }
+    
+    
 }
+
 void Map::printMap()
 {
-  std::ofstream mapFile;
-  mapFile.open("TempMap.txt", std::ofstream::out | std::ofstream::trunc);
+	cout << RESET<< endl;
+	  std::ofstream mapFile;
+	  mapFile.open("TempMap.txt", std::ofstream::out | std::ofstream::trunc);
 
-  mapFile << mapSizeX << endl;
-  for(int i = 0; i < mapSizeX;i++)
-  {
-      mapFile << MapContents[i] << endl;
-      cout << MapContents[i] << endl;
-  }
-  mapFile.close();
+	  mapFile << mapSizeX << endl;
+	  for(int i = 0; i < mapSizeX;i++)
+	  {
+	      mapFile << MapContents[i] << endl;
+	      cout << GREEN <<  MapContents[i] << endl;
+	  }
+	  mapFile.close();
 }
 
 bool Map :: Move (int one, int two, int three, int four)

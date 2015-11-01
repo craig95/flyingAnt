@@ -17,14 +17,7 @@
 #include "subject.h"
 class Adapter : public Unit
 {
-private:
-		/**
-		@brief The unit(Target)
-		*/
 	Unit * A;
-		/**
-		@brief The Map(Adaptee)
-		*/
 	Subject * T;
 
 	public:
