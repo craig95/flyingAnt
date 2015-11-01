@@ -34,13 +34,6 @@ public:
 	Unit* clone();
 
 		/**
-		*	This function "attacks" a player of type Unit.
-		*	@param The Player of type Unit this ogre will be attacking (afflicting damage to).
-		*	@return Nothing is returned (function is void).
-		*/
-	//virtual void attack(Unit&);
-
-		/**
 		*	This function lets this Ogre mob of type Unit take damage to itself.
 		*	@param An integer indicating how much damage should be taken by the Ogre mob (how much the attribute Health will be decremented by).
 		*	@return Nothing is returned (function is void).

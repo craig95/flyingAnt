@@ -1,3 +1,15 @@
+/**
+ *	@file singlePlyerGame.h
+ *	@class Player
+ *	@author Craig van Heerden U15029779, Dedre Olwage U15015239
+ *
+ *	@brief A class to easily setup and start a single player game.
+ *
+ *	@section Description
+ * 	This class creates all the units. It also loads the map and handels the game loop.
+ *
+ */
+
 #ifndef SINGLEPLAYERGAME_H
 #define SINGLEPLAYERGAME_H
 
@@ -32,11 +44,27 @@ public:
 	*	@return An integer indicating how much damage should be taken by the player/mob itself.
 	*/
 	int amountDamage(int &,char ch1, char ch2);
+    
+    /**
+     *	This function is used to set up the game.
+     *	@return Nothing is returned (function is void).
+     */
 	void setupSinglePlayerGame();
+    
+    /**
+     *	This function is used to start the game and run the game loop
+     *	@return Nothing is returned (function is void).
+     */
 	void startGame();
-	Unit* findUnitAtCords(int x, int y);
 
 private:
+    /**
+     *	This function is used to start the game and run the game loop.
+     *	@param Two integers that are the coordinates of a cell.
+     *	@return The unit in the cell at the coordinates provided.
+     */
+    Unit* findUnitAtCords(int x, int y);
+    
 	Unit *army;
 	Unit *enemy;
 	Unit *adapterA;
