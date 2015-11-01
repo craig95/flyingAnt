@@ -3,11 +3,7 @@
 *	@class Map
 *	@author Craig van Heerden U15029779, Dedre Olwage U15015239
 *
-*	@brief //complete
-*
-*	@section Description
-* 	//complete
-*
+*	@brief This is the map object. It will keep an array of the map and be able to print it out.
 */
 
 #ifndef MAP_H
