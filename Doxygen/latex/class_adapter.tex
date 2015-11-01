@@ -1,0 +1,186 @@
+\hypertarget{class_adapter}{\section{\-Adapter \-Class \-Reference}
+\label{class_adapter}\index{\-Adapter@{\-Adapter}}
+}
+
+
+\-To convert the interface of class \hyperlink{class_map}{\-Map} into a compatible interface for class \hyperlink{class_unit}{\-Unit} to work with.  
+
+
+
+
+{\ttfamily \#include $<$adapter.\-h$>$}
+
+\-Inheritance diagram for \-Adapter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_adapter}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_adapter_af96fb763272ef2e3001e86aa2d0b6a13}{clone} ()
+\item 
+\hyperlink{class_adapter_a30b53600a2372803e82f4078cfa14c68}{\-Adapter} (\hyperlink{class_subject}{\-Subject} $\ast$\-T\-T, \hyperlink{class_unit}{\-Unit} $\ast$army)
+\item 
+bool \hyperlink{class_adapter_a099c8e7278284871cc17a6b156c2a91f}{\-Move} (int x, int y, int x2, int y2)
+\item 
+void \hyperlink{class_adapter_aa9d2ae9288769d9504e2a5bdd7436f94}{set\-Cell} (int x, int y, int x2, int y2, char ch)
+\item 
+char \hyperlink{class_adapter_ac2bc064f26337e3b842cb3384055b1a5}{get\-Cell} (int x, int y)
+\item 
+char \hyperlink{class_adapter_ae85f02e71fbbace6677781a7d0367431}{test\-Cell} (int x, int y)
+\item 
+void \hyperlink{class_adapter_a8690d95eb87605fe8bccf3f644c3091e}{take\-Damage} (int damage)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-To convert the interface of class \hyperlink{class_map}{\-Map} into a compatible interface for class \hyperlink{class_unit}{\-Unit} to work with. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of testing if a \hyperlink{class_unit}{\-Unit} object can move on the map, it gets a certain cell from the map, and it tests a cell if it contains a certain character. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_adapter_a30b53600a2372803e82f4078cfa14c68}{\index{\-Adapter@{\-Adapter}!\-Adapter@{\-Adapter}}
+\index{\-Adapter@{\-Adapter}!Adapter@{\-Adapter}}
+\subsubsection[{\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Adapter\-::\-Adapter} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Subject} $\ast$}]{\-T\-T, }
+\item[{{\bf \-Unit} $\ast$}]{army}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_adapter_a30b53600a2372803e82f4078cfa14c68}
+\-This constructor assignd values to the attributes '\-A' and '\-T' 
+\begin{DoxyParams}{\-Parameters}
+{\em \-The} & two values that will be used to set the attributes '\-A' and '\-T' \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_adapter_af96fb763272ef2e3001e86aa2d0b6a13}{\index{\-Adapter@{\-Adapter}!clone@{clone}}
+\index{clone@{clone}!Adapter@{\-Adapter}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit}$\ast$ {\bf \-Adapter\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_adapter_af96fb763272ef2e3001e86aa2d0b6a13}
+\-This function creates a clone of a player/mob of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a player/mob of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_add809c0669cb6b08afae913da60c4cc1}{\-Unit}.
+
+\hypertarget{class_adapter_ac2bc064f26337e3b842cb3384055b1a5}{\index{\-Adapter@{\-Adapter}!get\-Cell@{get\-Cell}}
+\index{get\-Cell@{get\-Cell}!Adapter@{\-Adapter}}
+\subsubsection[{get\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Adapter\-::get\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_adapter_ac2bc064f26337e3b842cb3384055b1a5}
+\-This function creates calls another function in it to return a certian cell's contents. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, the x-\/ and y-\/coordinate of the cell which the contents of has to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A char conteaining the contents of a specific cell. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a24ab85d43fd8252cb8ddc51072165ce9}{\-Unit}.
+
+\hypertarget{class_adapter_a099c8e7278284871cc17a6b156c2a91f}{\index{\-Adapter@{\-Adapter}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Adapter@{\-Adapter}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Adapter\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_adapter_a099c8e7278284871cc17a6b156c2a91f}
+\-This function calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a3a1ea72471b9effea5a5a24473025586}{\-Unit}.
+
+\hypertarget{class_adapter_aa9d2ae9288769d9504e2a5bdd7436f94}{\index{\-Adapter@{\-Adapter}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Adapter@{\-Adapter}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Adapter\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_adapter_aa9d2ae9288769d9504e2a5bdd7436f94}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a7448d5a8193afa3c6249fb96399adca5}{\-Unit}.
+
+\hypertarget{class_adapter_a8690d95eb87605fe8bccf3f644c3091e}{\index{\-Adapter@{\-Adapter}!take\-Damage@{take\-Damage}}
+\index{take\-Damage@{take\-Damage}!Adapter@{\-Adapter}}
+\subsubsection[{take\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Adapter\-::take\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_adapter_a8690d95eb87605fe8bccf3f644c3091e}
+\-This function lets a player/mob of type \hyperlink{class_unit}{\-Unit} take damage to itself. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating how much damage should be taken by the player /mob (how much the attribute \-Health will be decremented by). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_acf436602434c7aa33e9ace724dd48cf0}{\-Unit}.
+
+\hypertarget{class_adapter_ae85f02e71fbbace6677781a7d0367431}{\index{\-Adapter@{\-Adapter}!test\-Cell@{test\-Cell}}
+\index{test\-Cell@{test\-Cell}!Adapter@{\-Adapter}}
+\subsubsection[{test\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Adapter\-::test\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_adapter_ae85f02e71fbbace6677781a7d0367431}
+\-This function creates calls another function in it to determine whether if there is a character above,below,left or right from the player/mob. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, initial x-\/ and y-\/coordinate used to calculate cells around it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A string indicating if there is something above,below, left or right from the player/mob. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a0dd2aec8c26166f1256cadb41f24e17c}{\-Unit}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{adapter_8h}{adapter.\-h}\end{DoxyCompactItemize}

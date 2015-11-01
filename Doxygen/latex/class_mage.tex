@@ -1,0 +1,131 @@
+\hypertarget{class_mage}{\section{\-Mage \-Class \-Reference}
+\label{class_mage}\index{\-Mage@{\-Mage}}
+}
+
+
+\-A class for creating clones of a specific type of player (mage player).  
+
+
+
+
+{\ttfamily \#include $<$mage.\-h$>$}
+
+\-Inheritance diagram for \-Mage\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mage}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mage_a9d7d4455a6fa1f8e35117e0dc301d082}{\-Mage} ()
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_mage_a912add3131e2e6526f152938eb3d4193}{clone} ()
+\item 
+virtual void \hyperlink{class_mage_adcdb524ec97442ba0f55f9e5d62bb917}{take\-Damage} (int)
+\item 
+bool \hyperlink{class_mage_a25e48415ef4a906e169c2d23d770bd1b}{\-Move} (int, int, int, int)
+\item 
+void \hyperlink{class_mage_a86ed962ea9f6051a82e342c2b618b3c2}{set\-Cell} (int, int, char)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for creating clones of a specific type of player (mage player). 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating clones of the player type \hyperlink{class_mage}{\-Mage}, as well as give the player the ability to attack another mob or take damage itself. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_mage_a9d7d4455a6fa1f8e35117e0dc301d082}{\index{\-Mage@{\-Mage}!\-Mage@{\-Mage}}
+\index{\-Mage@{\-Mage}!Mage@{\-Mage}}
+\subsubsection[{\-Mage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Mage\-::\-Mage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mage_a9d7d4455a6fa1f8e35117e0dc301d082}
+\-A constructor for setting the values from inherited attributes(from class Unit). 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_mage_a912add3131e2e6526f152938eb3d4193}{\index{\-Mage@{\-Mage}!clone@{clone}}
+\index{clone@{clone}!Mage@{\-Mage}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Mage\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_mage_a912add3131e2e6526f152938eb3d4193}
+\-This function creates a clone of a \hyperlink{class_mage}{\-Mage} player of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a \hyperlink{class_mage}{\-Mage} player of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_add809c0669cb6b08afae913da60c4cc1}{\-Unit}.
+
+\hypertarget{class_mage_a25e48415ef4a906e169c2d23d770bd1b}{\index{\-Mage@{\-Mage}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Mage@{\-Mage}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Mage\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_mage_a25e48415ef4a906e169c2d23d770bd1b}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a3a1ea72471b9effea5a5a24473025586}{\-Unit}.
+
+\hypertarget{class_mage_a86ed962ea9f6051a82e342c2b618b3c2}{\index{\-Mage@{\-Mage}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Mage@{\-Mage}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Mage\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{class_mage_a86ed962ea9f6051a82e342c2b618b3c2}
+\-This function calls another function to set a specific ceell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_mage_adcdb524ec97442ba0f55f9e5d62bb917}{\index{\-Mage@{\-Mage}!take\-Damage@{take\-Damage}}
+\index{take\-Damage@{take\-Damage}!Mage@{\-Mage}}
+\subsubsection[{take\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Mage\-::take\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_mage_adcdb524ec97442ba0f55f9e5d62bb917}
+\-This function lets this \hyperlink{class_mage}{\-Mage} player of type \hyperlink{class_unit}{\-Unit} take damage to itself. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating how much damage should be taken by the \hyperlink{class_mage}{\-Mage} player (how much the attribute \-Health will be decremented by). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_acf436602434c7aa33e9ace724dd48cf0}{\-Unit}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mage_8h}{mage.\-h}\item 
+mage.\-cpp\end{DoxyCompactItemize}

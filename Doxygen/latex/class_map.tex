@@ -1,0 +1,238 @@
+\hypertarget{class_map}{\section{\-Map \-Class \-Reference}
+\label{class_map}\index{\-Map@{\-Map}}
+}
+
+
+\-This is the map object. \-It will keep an array of the map and be able to print it out.  
+
+
+
+
+{\ttfamily \#include $<$\-Map.\-h$>$}
+
+\-Inheritance diagram for \-Map\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_map}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_ac799bd535a5174700b11ebf7fa2c62e4}{\-Map} (char $\ast$)
+\item 
+void \hyperlink{class_map_a1cefc1b8ed6692667e2019f64acc0f5a}{print\-Map} ()
+\item 
+bool \hyperlink{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}{\-Move} (int, int, int, int)
+\item 
+void \hyperlink{class_map_adec4a268e6a6eb539595a32e7edfa27a}{set\-Map} ()
+\item 
+int \hyperlink{class_map_a69522ad8e85168b7288f75df1b2e9280}{get\-X\-Length} ()
+\item 
+int \hyperlink{class_map_a574257714fc7f50b1d9ba00c472db341}{get\-Y\-Length} ()
+\item 
+void \hyperlink{class_map_a001f38ef72ab960645f9e3c503d8c06b}{set\-Cell} (int x, int y, int x2, int y2, char c)
+\item 
+char \hyperlink{class_map_a05318be1abb0d4c230db84525d4fa5e7}{get\-Cell} (int, int)
+\item 
+char \hyperlink{class_map_a40733afdd2dcc7b152f17c2dd205fbb3}{test\-Cell} (int, int)
+\item 
+void \hyperlink{class_map_a8a0996ccb54effa9850cef39410de0f5}{notify} (\hyperlink{class_subject}{\-Subject} $\ast$map)
+\item 
+void \hyperlink{class_map_a4f9fcdba15fc5d1ee2594802e6ed326e}{clear} (int, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the map object. \-It will keep an array of the map and be able to print it out. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239 
+\end{DoxyAuthor}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_map_ac799bd535a5174700b11ebf7fa2c62e4}{\index{\-Map@{\-Map}!\-Map@{\-Map}}
+\index{\-Map@{\-Map}!Map@{\-Map}}
+\subsubsection[{\-Map}]{\setlength{\rightskip}{0pt plus 5cm}\-Map\-::\-Map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_map_ac799bd535a5174700b11ebf7fa2c62e4}
+\-This constructor sets the attribute \char`\"{}\-File Location\char`\"{}'s value. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-A} & char which the attribute \char`\"{}\-File location\char`\"{} should be set to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_map_a4f9fcdba15fc5d1ee2594802e6ed326e}{\index{\-Map@{\-Map}!clear@{clear}}
+\index{clear@{clear}!Map@{\-Map}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Map\-::clear} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_map_a4f9fcdba15fc5d1ee2594802e6ed326e}
+\-This function 'clears' the cell at the coordinates by making it a space. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, the x and y coordinates of the cell to be cleared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+\hypertarget{class_map_a05318be1abb0d4c230db84525d4fa5e7}{\index{\-Map@{\-Map}!get\-Cell@{get\-Cell}}
+\index{get\-Cell@{get\-Cell}!Map@{\-Map}}
+\subsubsection[{get\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Map\-::get\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_map_a05318be1abb0d4c230db84525d4fa5e7}
+\-This function returns a certian cell's contents. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, the x-\/ and y-\/coordinate of the cell which the contents of has to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A char conteaining the contents of a specific cell. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_subject_a6ef90adc577f3d6476b451ab69a5a3c6}{\-Subject}.
+
+\hypertarget{class_map_a69522ad8e85168b7288f75df1b2e9280}{\index{\-Map@{\-Map}!get\-X\-Length@{get\-X\-Length}}
+\index{get\-X\-Length@{get\-X\-Length}!Map@{\-Map}}
+\subsubsection[{get\-X\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Map\-::get\-X\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_map_a69522ad8e85168b7288f75df1b2e9280}
+\-This function returns the lenght of the map (total rows of the 2\-D dynamic array). \begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_subject_aac54fd606aba88a7ef627f573cc812a0}{\-Subject}.
+
+\hypertarget{class_map_a574257714fc7f50b1d9ba00c472db341}{\index{\-Map@{\-Map}!get\-Y\-Length@{get\-Y\-Length}}
+\index{get\-Y\-Length@{get\-Y\-Length}!Map@{\-Map}}
+\subsubsection[{get\-Y\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Map\-::get\-Y\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_map_a574257714fc7f50b1d9ba00c472db341}
+\-This function returns the width of the map (total columns of the 2\-D dynamic array). \begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_subject_a5ee45d72d8fbf5d208629fc4ddf2b5fc}{\-Subject}.
+
+\hypertarget{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}{\index{\-Map@{\-Map}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Map@{\-Map}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Map\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{one, }
+\item[{int}]{two, }
+\item[{int}]{three, }
+\item[{int}]{four}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}
+\-This function determines whether a player/mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indication whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_subject_aa767b1d8255245f0955a8aa469b35f3a}{\-Subject}.
+
+\hypertarget{class_map_a8a0996ccb54effa9850cef39410de0f5}{\index{\-Map@{\-Map}!notify@{notify}}
+\index{notify@{notify}!Map@{\-Map}}
+\subsubsection[{notify}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Map\-::notify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Subject} $\ast$}]{map}
+\end{DoxyParamCaption}
+)}}\label{class_map_a8a0996ccb54effa9850cef39410de0f5}
+\-This function informs the \hyperlink{class_subject}{\-Subject} about a change it underwent, so the \hyperlink{class_subject}{\-Subject} can react accordingly. \begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_subject_a31874efc39347a6510749f1b3c6c8aea}{\-Subject}.
+
+\hypertarget{class_map_a1cefc1b8ed6692667e2019f64acc0f5a}{\index{\-Map@{\-Map}!print\-Map@{print\-Map}}
+\index{print\-Map@{print\-Map}!Map@{\-Map}}
+\subsubsection[{print\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Map\-::print\-Map} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_a1cefc1b8ed6692667e2019f64acc0f5a}
+\-This function prints the contents of the 2\-D dynamic array onto the screen. \begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_map_a001f38ef72ab960645f9e3c503d8c06b}{\index{\-Map@{\-Map}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Map@{\-Map}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Map\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_map_a001f38ef72ab960645f9e3c503d8c06b}
+\-This function sets a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_subject_a3e8c4e46252ea6eec4ab1f2a72b74e77}{\-Subject}.
+
+\hypertarget{class_map_adec4a268e6a6eb539595a32e7edfa27a}{\index{\-Map@{\-Map}!set\-Map@{set\-Map}}
+\index{set\-Map@{set\-Map}!Map@{\-Map}}
+\subsubsection[{set\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Map\-::set\-Map} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_adec4a268e6a6eb539595a32e7edfa27a}
+\-This function that sets the contents of given text file into the 2\-D dynamic array. \begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_map_a40733afdd2dcc7b152f17c2dd205fbb3}{\index{\-Map@{\-Map}!test\-Cell@{test\-Cell}}
+\index{test\-Cell@{test\-Cell}!Map@{\-Map}}
+\subsubsection[{test\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Map\-::test\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_map_a40733afdd2dcc7b152f17c2dd205fbb3}
+\-This function creates calls another function in it to determine whether if there is a character above,below,left or right from the player/mob. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, initial x-\/ and y-\/coordinate used to calculate cells around it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A character indicating if there is something 'a'bove, 'b'elow, 'l'eft or 'r'ight from the player/mob. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_subject_adac09d62a1198bf898a4d191402a3dc4}{\-Subject}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_map_8h}{\-Map.\-h}\item 
+\-Map.\-cpp\end{DoxyCompactItemize}

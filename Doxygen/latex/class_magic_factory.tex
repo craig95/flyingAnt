@@ -1,0 +1,71 @@
+\hypertarget{class_magic_factory}{\section{\-Magic\-Factory \-Class \-Reference}
+\label{class_magic_factory}\index{\-Magic\-Factory@{\-Magic\-Factory}}
+}
+
+
+\-A class for creating \-Magic units (players or mobs)  
+
+
+
+
+{\ttfamily \#include $<$magicfactory.\-h$>$}
+
+\-Inheritance diagram for \-Magic\-Factory\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_magic_factory}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_magic_factory_a3021b979bd991e32e311c8869d500b46}{create\-Player} ()
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_magic_factory_a9cfbadc11ba1c80d8a8c43d060e24ca6}{create\-Mob} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for creating \-Magic units (players or mobs) 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating a \-Magic player of type \hyperlink{class_unit}{\-Unit} and a \-Magic mob of type \hyperlink{class_unit}{\-Unit}. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_magic_factory_a9cfbadc11ba1c80d8a8c43d060e24ca6}{\index{\-Magic\-Factory@{\-Magic\-Factory}!create\-Mob@{create\-Mob}}
+\index{create\-Mob@{create\-Mob}!MagicFactory@{\-Magic\-Factory}}
+\subsubsection[{create\-Mob}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Magic\-Factory\-::create\-Mob} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_magic_factory_a9cfbadc11ba1c80d8a8c43d060e24ca6}
+\-This function creates a \-Magic mob of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a \-Magic mob of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_factory_a4e24da648ac60377695a698b75be3d7a}{\-Unit\-Factory}.
+
+\hypertarget{class_magic_factory_a3021b979bd991e32e311c8869d500b46}{\index{\-Magic\-Factory@{\-Magic\-Factory}!create\-Player@{create\-Player}}
+\index{create\-Player@{create\-Player}!MagicFactory@{\-Magic\-Factory}}
+\subsubsection[{create\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Magic\-Factory\-::create\-Player} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_magic_factory_a3021b979bd991e32e311c8869d500b46}
+\-This function creates a \-Magic player of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a \-Magic player of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}{\-Unit\-Factory}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{magicfactory_8h}{magicfactory.\-h}\item 
+magicfactory.\-cpp\end{DoxyCompactItemize}

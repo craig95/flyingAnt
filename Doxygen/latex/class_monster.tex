@@ -1,0 +1,93 @@
+\hypertarget{class_monster}{\section{\-Monster \-Class \-Reference}
+\label{class_monster}\index{\-Monster@{\-Monster}}
+}
+
+
+\-An abstract class for creating mobs of type \hyperlink{class_unit}{\-Unit}.  
+
+
+
+
+{\ttfamily \#include $<$monster.\-h$>$}
+
+\-Inheritance diagram for \-Monster\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_monster}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_monster_a7ffc80573d07ce8aa1761c2a3c83d224}{\-Move} (int, int, int, int)
+\item 
+virtual void \hyperlink{class_monster_ad6d065914fe528df5331f15ef77189c9}{set\-Cell} (int, int, char)
+\item 
+virtual \hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_monster_a5697717fca1588b82c9b9f35fe9f73ff}{clone} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-An abstract class for creating mobs of type \hyperlink{class_unit}{\-Unit}. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of cloning a mob , as well as enable the mobs to attack players or take damage on themselves. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_monster_a5697717fca1588b82c9b9f35fe9f73ff}{\index{\-Monster@{\-Monster}!clone@{clone}}
+\index{clone@{clone}!Monster@{\-Monster}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-Unit}$\ast$ {\bf \-Monster\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_monster_a5697717fca1588b82c9b9f35fe9f73ff}
+\-This pure virtual function creates a clone of a mob of type \hyperlink{class_unit}{\-Unit}.//// how to state otherwise? \begin{DoxyReturn}{\-Returns}
+\-A pointer to a mob of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+\hypertarget{class_monster_a7ffc80573d07ce8aa1761c2a3c83d224}{\index{\-Monster@{\-Monster}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Monster@{\-Monster}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Monster\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_monster_a7ffc80573d07ce8aa1761c2a3c83d224}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_imp_a387768f71574835545c7b50bfa6847e8}{\-Unit\-Imp}.
+
+\hypertarget{class_monster_ad6d065914fe528df5331f15ef77189c9}{\index{\-Monster@{\-Monster}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Monster@{\-Monster}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Monster\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{char}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_monster_ad6d065914fe528df5331f15ef77189c9}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{monster_8h}{monster.\-h}\end{DoxyCompactItemize}

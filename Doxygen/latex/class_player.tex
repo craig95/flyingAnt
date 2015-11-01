@@ -1,0 +1,93 @@
+\hypertarget{class_player}{\section{\-Player \-Class \-Reference}
+\label{class_player}\index{\-Player@{\-Player}}
+}
+
+
+\-An abstract class for creating players of type \hyperlink{class_unit}{\-Unit}.  
+
+
+
+
+{\ttfamily \#include $<$player.\-h$>$}
+
+\-Inheritance diagram for \-Player\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_player_a35fec59a1a85793af00b7cccebe58549}{\-Move} (int, int, int, int)
+\item 
+virtual void \hyperlink{class_player_a7ed0fb38b434823156402d273bd5cf2b}{set\-Cell} (int, int, char)
+\item 
+virtual \hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_player_ae3933224b71e261e4e166576ca9483f8}{clone} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-An abstract class for creating players of type \hyperlink{class_unit}{\-Unit}. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of cloning a player, as well as enable the players to attack mobs or take damage on themselves. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_player_ae3933224b71e261e4e166576ca9483f8}{\index{\-Player@{\-Player}!clone@{clone}}
+\index{clone@{clone}!Player@{\-Player}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-Unit}$\ast$ {\bf \-Player\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_player_ae3933224b71e261e4e166576ca9483f8}
+\-This pure virtual function creates a clone of a player of type \hyperlink{class_unit}{\-Unit}.//// how to state otherwise? \begin{DoxyReturn}{\-Returns}
+\-A pointer to a player of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+\hypertarget{class_player_a35fec59a1a85793af00b7cccebe58549}{\index{\-Player@{\-Player}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Player@{\-Player}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Player\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_player_a35fec59a1a85793af00b7cccebe58549}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_imp_a387768f71574835545c7b50bfa6847e8}{\-Unit\-Imp}.
+
+\hypertarget{class_player_a7ed0fb38b434823156402d273bd5cf2b}{\index{\-Player@{\-Player}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Player@{\-Player}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Player\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{char}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_player_a7ed0fb38b434823156402d273bd5cf2b}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{player_8h}{player.\-h}\end{DoxyCompactItemize}

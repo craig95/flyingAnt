@@ -1,0 +1,131 @@
+\hypertarget{class_ogre}{\section{\-Ogre \-Class \-Reference}
+\label{class_ogre}\index{\-Ogre@{\-Ogre}}
+}
+
+
+\-A class for creating clones of a specific type of monster (ogre mob).  
+
+
+
+
+{\ttfamily \#include $<$ogre.\-h$>$}
+
+\-Inheritance diagram for \-Ogre\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ogre}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ogre_aeb7c78cfd86de3a8e2175d87dac17c9f}{\-Ogre} ()
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_ogre_a0917522dc76d4a5f0779f0f09c64c832}{clone} ()
+\item 
+virtual void \hyperlink{class_ogre_a25d2dc4d79c25dbbb6b8b5d689de5bc2}{take\-Damage} (int)
+\item 
+bool \hyperlink{class_ogre_aba1062080ab136a62cb58edd3c7be955}{\-Move} (int, int, int, int)
+\item 
+void \hyperlink{class_ogre_afe986794a4a6d00691670c741f42beca}{set\-Cell} (int, int, char)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for creating clones of a specific type of monster (ogre mob). 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating clones of the mob type \hyperlink{class_ogre}{\-Ogre}, as well as give the mob the ability to attack another player or take damage itself. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_ogre_aeb7c78cfd86de3a8e2175d87dac17c9f}{\index{\-Ogre@{\-Ogre}!\-Ogre@{\-Ogre}}
+\index{\-Ogre@{\-Ogre}!Ogre@{\-Ogre}}
+\subsubsection[{\-Ogre}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Ogre\-::\-Ogre} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ogre_aeb7c78cfd86de3a8e2175d87dac17c9f}
+\-A constructor for setting the values from inherited attributes(from class Unit). 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_ogre_a0917522dc76d4a5f0779f0f09c64c832}{\index{\-Ogre@{\-Ogre}!clone@{clone}}
+\index{clone@{clone}!Ogre@{\-Ogre}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Ogre\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_ogre_a0917522dc76d4a5f0779f0f09c64c832}
+\-This function creates a clone of a \hyperlink{class_ogre}{\-Ogre} mob of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a \hyperlink{class_ogre}{\-Ogre} mob of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_add809c0669cb6b08afae913da60c4cc1}{\-Unit}.
+
+\hypertarget{class_ogre_aba1062080ab136a62cb58edd3c7be955}{\index{\-Ogre@{\-Ogre}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Ogre@{\-Ogre}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ogre\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_ogre_aba1062080ab136a62cb58edd3c7be955}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a3a1ea72471b9effea5a5a24473025586}{\-Unit}.
+
+\hypertarget{class_ogre_afe986794a4a6d00691670c741f42beca}{\index{\-Ogre@{\-Ogre}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Ogre@{\-Ogre}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Ogre\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{class_ogre_afe986794a4a6d00691670c741f42beca}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_ogre_a25d2dc4d79c25dbbb6b8b5d689de5bc2}{\index{\-Ogre@{\-Ogre}!take\-Damage@{take\-Damage}}
+\index{take\-Damage@{take\-Damage}!Ogre@{\-Ogre}}
+\subsubsection[{take\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Ogre\-::take\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_ogre_a25d2dc4d79c25dbbb6b8b5d689de5bc2}
+\-This function lets this \hyperlink{class_ogre}{\-Ogre} mob of type \hyperlink{class_unit}{\-Unit} take damage to itself. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating how much damage should be taken by the \hyperlink{class_ogre}{\-Ogre} mob (how much the attribute \-Health will be decremented by). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_acf436602434c7aa33e9ace724dd48cf0}{\-Unit}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ogre_8h}{ogre.\-h}\item 
+ogre.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,214 @@
+\hypertarget{class_subject}{\section{\-Subject \-Class \-Reference}
+\label{class_subject}\index{\-Subject@{\-Subject}}
+}
+
+
+\-A class serving as the communicator between objects.  
+
+
+
+
+{\ttfamily \#include $<$subject.\-h$>$}
+
+\-Inheritance diagram for \-Subject\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_subject}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_subject_afc0ec46c6ef16c1cf24b2e512c2261be}{attach} (\hyperlink{class_unit}{\-Unit} $\ast$observer)
+\item 
+virtual void \hyperlink{class_subject_adf94e5dc7e4e444a02349421f06301ab}{detach} (\hyperlink{class_unit}{\-Unit} $\ast$observer)
+\item 
+void \hyperlink{class_subject_a31874efc39347a6510749f1b3c6c8aea}{notify} (\hyperlink{class_subject}{\-Subject} $\ast$)
+\item 
+virtual bool \hyperlink{class_subject_aa767b1d8255245f0955a8aa469b35f3a}{\-Move} (int, int, int, int)=0
+\item 
+virtual void \hyperlink{class_subject_a3e8c4e46252ea6eec4ab1f2a72b74e77}{set\-Cell} (int, int, int, int, char)=0
+\item 
+virtual char \hyperlink{class_subject_a6ef90adc577f3d6476b451ab69a5a3c6}{get\-Cell} (int, int)=0
+\item 
+virtual char \hyperlink{class_subject_adac09d62a1198bf898a4d191402a3dc4}{test\-Cell} (int, int)=0
+\item 
+virtual int \hyperlink{class_subject_aac54fd606aba88a7ef627f573cc812a0}{get\-X\-Length} ()=0
+\item 
+virtual int \hyperlink{class_subject_a5ee45d72d8fbf5d208629fc4ddf2b5fc}{get\-Y\-Length} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class serving as the communicator between objects. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of attaching or detaching objects to this \hyperlink{class_subject}{\-Subject}, as well as notify all objects attached to this \hyperlink{class_subject}{\-Subject} on any changes this \hyperlink{class_subject}{\-Subject} might imply, so that the attached objects can respond accordingly. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_subject_afc0ec46c6ef16c1cf24b2e512c2261be}{\index{\-Subject@{\-Subject}!attach@{attach}}
+\index{attach@{attach}!Subject@{\-Subject}}
+\subsubsection[{attach}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Subject\-::attach} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Unit} $\ast$}]{observer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_subject_afc0ec46c6ef16c1cf24b2e512c2261be}
+\-This function allows objects to attach themselves to the \hyperlink{class_subject}{\-Subject} as observers (via adding the to the 'm\-Observers' vector). 
+\begin{DoxyParams}{\-Parameters}
+{\em \-A} & pointer of type \hyperlink{class_unit}{\-Unit} to the object that needs to be attached (added to the 'm\-Observers' vector). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+\hypertarget{class_subject_adf94e5dc7e4e444a02349421f06301ab}{\index{\-Subject@{\-Subject}!detach@{detach}}
+\index{detach@{detach}!Subject@{\-Subject}}
+\subsubsection[{detach}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Subject\-::detach} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Unit} $\ast$}]{observer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_subject_adf94e5dc7e4e444a02349421f06301ab}
+\-This function allows objects to detach themselves from the \hyperlink{class_subject}{\-Subject} as observers (via removing them from the 'm\-Observers' vector). 
+\begin{DoxyParams}{\-Parameters}
+{\em \-A} & pointer of type \hyperlink{class_unit}{\-Unit} to the object that needs to be detached (removed from the 'm\-Observers' vector). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+\hypertarget{class_subject_a6ef90adc577f3d6476b451ab69a5a3c6}{\index{\-Subject@{\-Subject}!get\-Cell@{get\-Cell}}
+\index{get\-Cell@{get\-Cell}!Subject@{\-Subject}}
+\subsubsection[{get\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual char {\bf \-Subject\-::get\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_subject_a6ef90adc577f3d6476b451ab69a5a3c6}
+\-This pure virtual function creates needs to be implemented to call another function in it to return a certian cell's contents. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, the x-\/ and y-\/coordinate of the cell which the contents of has to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A char conteaining the contents of a specific cell. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_map_a05318be1abb0d4c230db84525d4fa5e7}{\-Map}.
+
+\hypertarget{class_subject_aac54fd606aba88a7ef627f573cc812a0}{\index{\-Subject@{\-Subject}!get\-X\-Length@{get\-X\-Length}}
+\index{get\-X\-Length@{get\-X\-Length}!Subject@{\-Subject}}
+\subsubsection[{get\-X\-Length}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf \-Subject\-::get\-X\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_subject_aac54fd606aba88a7ef627f573cc812a0}
+\-This pure virtual function creates needs to be implemented to return the length of the map (the total rows in the 2\-D dynamic array). \begin{DoxyReturn}{\-Returns}
+\-A integer containing the length of the map. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_map_a69522ad8e85168b7288f75df1b2e9280}{\-Map}.
+
+\hypertarget{class_subject_a5ee45d72d8fbf5d208629fc4ddf2b5fc}{\index{\-Subject@{\-Subject}!get\-Y\-Length@{get\-Y\-Length}}
+\index{get\-Y\-Length@{get\-Y\-Length}!Subject@{\-Subject}}
+\subsubsection[{get\-Y\-Length}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf \-Subject\-::get\-Y\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_subject_a5ee45d72d8fbf5d208629fc4ddf2b5fc}
+\-This pure virtual function creates needs to be implemented to return the width of the map (the total columns in the 2\-D dynamic array). \begin{DoxyReturn}{\-Returns}
+\-A integer containing the width of the map. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_map_a574257714fc7f50b1d9ba00c472db341}{\-Map}.
+
+\hypertarget{class_subject_aa767b1d8255245f0955a8aa469b35f3a}{\index{\-Subject@{\-Subject}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Subject@{\-Subject}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Subject\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_subject_aa767b1d8255245f0955a8aa469b35f3a}
+\-This pure virtual function needs to be imlemented to call another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}{\-Map}.
+
+\hypertarget{class_subject_a31874efc39347a6510749f1b3c6c8aea}{\index{\-Subject@{\-Subject}!notify@{notify}}
+\index{notify@{notify}!Subject@{\-Subject}}
+\subsubsection[{notify}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Subject\-::notify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Subject} $\ast$}]{map}
+\end{DoxyParamCaption}
+)}}\label{class_subject_a31874efc39347a6510749f1b3c6c8aea}
+\-This function informs all of the objects attached to the \hyperlink{class_subject}{\-Subject} (all the objects in the 'm\-Observers' vector) about a change the \hyperlink{class_subject}{\-Subject} underwent, so they can react accordingly. \begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Reimplemented in \hyperlink{class_map_a8a0996ccb54effa9850cef39410de0f5}{\-Map}.
+
+\hypertarget{class_subject_a3e8c4e46252ea6eec4ab1f2a72b74e77}{\index{\-Subject@{\-Subject}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Subject@{\-Subject}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Subject\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{char}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_subject_a3e8c4e46252ea6eec4ab1f2a72b74e77}
+\-This pure virtual function needs to be implemented to call another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_map_a001f38ef72ab960645f9e3c503d8c06b}{\-Map}.
+
+\hypertarget{class_subject_adac09d62a1198bf898a4d191402a3dc4}{\index{\-Subject@{\-Subject}!test\-Cell@{test\-Cell}}
+\index{test\-Cell@{test\-Cell}!Subject@{\-Subject}}
+\subsubsection[{test\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual char {\bf \-Subject\-::test\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_subject_adac09d62a1198bf898a4d191402a3dc4}
+\-This pure virtual function creates needs to be impemented to call another function in it to determine whether if there is a character above,below,left or right from the player/mob. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, initial x-\/ and y-\/coordinate used to calculate cells around it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A string indicating if there is something above,below, left or right from the player/mob. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_map_a40733afdd2dcc7b152f17c2dd205fbb3}{\-Map}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{subject_8h}{subject.\-h}\item 
+subject.\-cpp\end{DoxyCompactItemize}

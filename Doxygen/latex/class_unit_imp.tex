@@ -1,0 +1,210 @@
+\hypertarget{class_unit_imp}{\section{\-Unit\-Imp \-Class \-Reference}
+\label{class_unit_imp}\index{\-Unit\-Imp@{\-Unit\-Imp}}
+}
+
+
+\-The implementation of unit. \-The implementation participant of bridge.  
+
+
+
+
+{\ttfamily \#include $<$\-Unit\-Imp.\-h$>$}
+
+\-Inheritance diagram for \-Unit\-Imp\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unit_imp}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_unit_imp_a03893cc4afecc82bc7b065f63fd7bb41}{get\-Health} ()
+\item 
+int \hyperlink{class_unit_imp_ab979127f81b58688ed5332e75792275e}{get\-Damage} ()
+\item 
+char \hyperlink{class_unit_imp_aec50862ee6702e73b2947ef330f70045}{get\-Description} ()
+\item 
+virtual bool \hyperlink{class_unit_imp_a387768f71574835545c7b50bfa6847e8}{\-Move} (int, int, int, int)
+\item 
+virtual void \hyperlink{class_unit_imp_a46b40de0053d38bdbb4a9c608135d7f1}{set\-Cell} (int, int, int, int, char)
+\item 
+virtual char \hyperlink{class_unit_imp_ae9682d287774c26e1293a7bcca0a4931}{get\-Cell} (int, int)
+\item 
+virtual char \hyperlink{class_unit_imp_a6d219ef4a2d31a72cd93cf2df9445b7a}{test\-Cell} (int, int)
+\item 
+void \hyperlink{class_unit_imp_a4f6368ca4bc256870c1466bdd36c8cab}{your\-Position} (int x, int y)
+\item 
+int \hyperlink{class_unit_imp_ac9d272bb195af8c2d6cd1401a5ade776}{get\-Y} ()
+\item 
+int \hyperlink{class_unit_imp_ace6f0ebfbc0eb8ba1f6ae7fbe9f0cd62}{get\-X} ()
+\item 
+void \hyperlink{class_unit_imp_a86f7cbf5782dde28b56770f38a032f72}{set\-Health} (int p\-Health)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The implementation of unit. \-The implementation participant of bridge. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239 
+\end{DoxyAuthor}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_unit_imp_ae9682d287774c26e1293a7bcca0a4931}{\index{\-Unit\-Imp@{\-Unit\-Imp}!get\-Cell@{get\-Cell}}
+\index{get\-Cell@{get\-Cell}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{get\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual char {\bf \-Unit\-Imp\-::get\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_unit_imp_ae9682d287774c26e1293a7bcca0a4931}
+\-This function creates calls another function in it to return a certian cell's contents. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, the x-\/ and y-\/coordinate of the cell which the contents of has to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A char conteaining the contents of a specific cell. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_ab979127f81b58688ed5332e75792275e}{\index{\-Unit\-Imp@{\-Unit\-Imp}!get\-Damage@{get\-Damage}}
+\index{get\-Damage@{get\-Damage}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{get\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Unit\-Imp\-::get\-Damage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_unit_imp_ab979127f81b58688ed5332e75792275e}
+\-This function gets the damage of the current \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-The value the 'damage' attribute holds. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_aec50862ee6702e73b2947ef330f70045}{\index{\-Unit\-Imp@{\-Unit\-Imp}!get\-Description@{get\-Description}}
+\index{get\-Description@{get\-Description}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{get\-Description}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Unit\-Imp\-::get\-Description} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_unit_imp_aec50862ee6702e73b2947ef330f70045}
+\-This function returns the description of the current \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A string containing the value of the 'description' attribute. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_a03893cc4afecc82bc7b065f63fd7bb41}{\index{\-Unit\-Imp@{\-Unit\-Imp}!get\-Health@{get\-Health}}
+\index{get\-Health@{get\-Health}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{get\-Health}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Unit\-Imp\-::get\-Health} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_unit_imp_a03893cc4afecc82bc7b065f63fd7bb41}
+\-This function gets the health of the current \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-The value the 'health' attribute holds. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_ace6f0ebfbc0eb8ba1f6ae7fbe9f0cd62}{\index{\-Unit\-Imp@{\-Unit\-Imp}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Unit\-Imp\-::get\-X} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_unit_imp_ace6f0ebfbc0eb8ba1f6ae7fbe9f0cd62}
+\-This function returns the value of the attribute 'init\-X'. \begin{DoxyReturn}{\-Returns}
+\-An integer holding the value of the attribute 'init\-X'. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_ac9d272bb195af8c2d6cd1401a5ade776}{\index{\-Unit\-Imp@{\-Unit\-Imp}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Unit\-Imp\-::get\-Y} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_unit_imp_ac9d272bb195af8c2d6cd1401a5ade776}
+\-This function returns the value of the attribute 'init\-Y'. \begin{DoxyReturn}{\-Returns}
+\-An integer holding the value of the attribute 'init\-Y'. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_a387768f71574835545c7b50bfa6847e8}{\index{\-Unit\-Imp@{\-Unit\-Imp}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Unit\-Imp\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_unit_imp_a387768f71574835545c7b50bfa6847e8}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented in \hyperlink{class_player_a35fec59a1a85793af00b7cccebe58549}{\-Player}, and \hyperlink{class_monster_a7ffc80573d07ce8aa1761c2a3c83d224}{\-Monster}.
+
+\hypertarget{class_unit_imp_a46b40de0053d38bdbb4a9c608135d7f1}{\index{\-Unit\-Imp@{\-Unit\-Imp}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Unit\-Imp\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{char}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_unit_imp_a46b40de0053d38bdbb4a9c608135d7f1}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_a86f7cbf5782dde28b56770f38a032f72}{\index{\-Unit\-Imp@{\-Unit\-Imp}!set\-Health@{set\-Health}}
+\index{set\-Health@{set\-Health}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{set\-Health}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Unit\-Imp\-::set\-Health} (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-Health}
+\end{DoxyParamCaption}
+)}}\label{class_unit_imp_a86f7cbf5782dde28b56770f38a032f72}
+\-This function sets the value of the attribute 'health'. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating what the value of the attribute 'health' should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_a6d219ef4a2d31a72cd93cf2df9445b7a}{\index{\-Unit\-Imp@{\-Unit\-Imp}!test\-Cell@{test\-Cell}}
+\index{test\-Cell@{test\-Cell}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{test\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}virtual char {\bf \-Unit\-Imp\-::test\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_unit_imp_a6d219ef4a2d31a72cd93cf2df9445b7a}
+\-This function creates calls another function in it to determine whether if there is a character above,below,left or right from the player/mob. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, initial x-\/ and y-\/coordinate used to calculate cells around it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A string indicating if there is something above,below, left or right from the player/mob. 
+\end{DoxyReturn}
+\hypertarget{class_unit_imp_a4f6368ca4bc256870c1466bdd36c8cab}{\index{\-Unit\-Imp@{\-Unit\-Imp}!your\-Position@{your\-Position}}
+\index{your\-Position@{your\-Position}!UnitImp@{\-Unit\-Imp}}
+\subsubsection[{your\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Unit\-Imp\-::your\-Position} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_unit_imp_a4f6368ca4bc256870c1466bdd36c8cab}
+\-This function sets a player/mobs x-\/ and y-\/coordinate (indicating their current position in the map/ 2\-D dynamic array), in other words it sets the values of the attributes init\-X and init\-Y. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Two} & integers, which the attributes 'init\-X 'and 'init\-Y 'should be set to. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_unit_imp_8h}{\-Unit\-Imp.\-h}\end{DoxyCompactItemize}

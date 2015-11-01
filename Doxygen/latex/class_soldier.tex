@@ -1,0 +1,131 @@
+\hypertarget{class_soldier}{\section{\-Soldier \-Class \-Reference}
+\label{class_soldier}\index{\-Soldier@{\-Soldier}}
+}
+
+
+\-A class for creating clones of a specific type of player (soldier player).  
+
+
+
+
+{\ttfamily \#include $<$soldier.\-h$>$}
+
+\-Inheritance diagram for \-Soldier\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_soldier}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_soldier_ad3144b22a146ef85eaff30a2a5ab78c0}{\-Soldier} ()
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_soldier_a6491ed3b4102643c504cf07392b01544}{clone} ()
+\item 
+virtual void \hyperlink{class_soldier_a8ec154c6e597a4b2973a7e832f97f402}{take\-Damage} (int)
+\item 
+bool \hyperlink{class_soldier_a6dcd4745e2108c9b231e01afebb584d1}{\-Move} (int, int, int, int)
+\item 
+void \hyperlink{class_soldier_a5eb6904e8716099dd52c306154751eba}{set\-Cell} (int, int, char)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for creating clones of a specific type of player (soldier player). 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating clones of the player type \hyperlink{class_soldier}{\-Soldier}, as well as give the player the ability to attack another mob or take damage itself. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_soldier_ad3144b22a146ef85eaff30a2a5ab78c0}{\index{\-Soldier@{\-Soldier}!\-Soldier@{\-Soldier}}
+\index{\-Soldier@{\-Soldier}!Soldier@{\-Soldier}}
+\subsubsection[{\-Soldier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Soldier\-::\-Soldier} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_soldier_ad3144b22a146ef85eaff30a2a5ab78c0}
+\-A constructor for setting the values from inherited attributes(from class Unit). 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_soldier_a6491ed3b4102643c504cf07392b01544}{\index{\-Soldier@{\-Soldier}!clone@{clone}}
+\index{clone@{clone}!Soldier@{\-Soldier}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Soldier\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_soldier_a6491ed3b4102643c504cf07392b01544}
+\-This function creates a clone of a \hyperlink{class_soldier}{\-Soldier} player of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a \hyperlink{class_soldier}{\-Soldier} player of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_add809c0669cb6b08afae913da60c4cc1}{\-Unit}.
+
+\hypertarget{class_soldier_a6dcd4745e2108c9b231e01afebb584d1}{\index{\-Soldier@{\-Soldier}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Soldier@{\-Soldier}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Soldier\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_soldier_a6dcd4745e2108c9b231e01afebb584d1}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a3a1ea72471b9effea5a5a24473025586}{\-Unit}.
+
+\hypertarget{class_soldier_a5eb6904e8716099dd52c306154751eba}{\index{\-Soldier@{\-Soldier}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Soldier@{\-Soldier}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Soldier\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{class_soldier_a5eb6904e8716099dd52c306154751eba}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_soldier_a8ec154c6e597a4b2973a7e832f97f402}{\index{\-Soldier@{\-Soldier}!take\-Damage@{take\-Damage}}
+\index{take\-Damage@{take\-Damage}!Soldier@{\-Soldier}}
+\subsubsection[{take\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Soldier\-::take\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_soldier_a8ec154c6e597a4b2973a7e832f97f402}
+\-This function lets this \hyperlink{class_soldier}{\-Soldier} player of type \hyperlink{class_unit}{\-Unit} take damage to itself. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating how much damage should be taken by the \hyperlink{class_soldier}{\-Soldier} player (how much the attribute \-Health will be decremented by). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_acf436602434c7aa33e9ace724dd48cf0}{\-Unit}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{soldier_8h}{soldier.\-h}\item 
+soldier.\-cpp\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
 /**
- *	@file singlePlayerGame.h
- *	@class SinglePlayerGame
+ *	@file ogre.h
+ *	@class Ogre
  *	@author Craig van Heerden U15029779, Dedre Olwage U15015239
  *
  *	@brief A class to easily setup and start a single player game.

@@ -1,0 +1,131 @@
+\hypertarget{class_thief}{\section{\-Thief \-Class \-Reference}
+\label{class_thief}\index{\-Thief@{\-Thief}}
+}
+
+
+\-A class for creating clones of a specific type of player (thief player).  
+
+
+
+
+{\ttfamily \#include $<$thief.\-h$>$}
+
+\-Inheritance diagram for \-Thief\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_thief}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_thief_aa27752dd9c628bf41d297fedee59c2df}{\-Thief} ()
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_thief_af9de8403347ca5ee8431d5a0e20cc1bc}{clone} ()
+\item 
+virtual void \hyperlink{class_thief_a72790a2a46c3b7da0a67f49a5e3fc48a}{take\-Damage} (int)
+\item 
+bool \hyperlink{class_thief_ac7cc85c286ed17f16fc8f71b60b1628f}{\-Move} (int, int, int, int)
+\item 
+void \hyperlink{class_thief_afae64f04a0c969194ed40a933b4401b2}{set\-Cell} (int, int, char)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for creating clones of a specific type of player (thief player). 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating clones of the player type \hyperlink{class_thief}{\-Thief}, as well as give the player the ability to attack another mob or take damage itself. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_thief_aa27752dd9c628bf41d297fedee59c2df}{\index{\-Thief@{\-Thief}!\-Thief@{\-Thief}}
+\index{\-Thief@{\-Thief}!Thief@{\-Thief}}
+\subsubsection[{\-Thief}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Thief\-::\-Thief} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thief_aa27752dd9c628bf41d297fedee59c2df}
+\-A constructor for setting the values from inherited attributes(from class Unit). 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_thief_af9de8403347ca5ee8431d5a0e20cc1bc}{\index{\-Thief@{\-Thief}!clone@{clone}}
+\index{clone@{clone}!Thief@{\-Thief}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Thief\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_thief_af9de8403347ca5ee8431d5a0e20cc1bc}
+\-This function creates a clone of a \-Thied player of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a \hyperlink{class_thief}{\-Thief} player of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_add809c0669cb6b08afae913da60c4cc1}{\-Unit}.
+
+\hypertarget{class_thief_ac7cc85c286ed17f16fc8f71b60b1628f}{\index{\-Thief@{\-Thief}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Thief@{\-Thief}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thief\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_thief_ac7cc85c286ed17f16fc8f71b60b1628f}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a3a1ea72471b9effea5a5a24473025586}{\-Unit}.
+
+\hypertarget{class_thief_afae64f04a0c969194ed40a933b4401b2}{\index{\-Thief@{\-Thief}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Thief@{\-Thief}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thief\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{class_thief_afae64f04a0c969194ed40a933b4401b2}
+\-This function calls another function to set a specific cell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_thief_a72790a2a46c3b7da0a67f49a5e3fc48a}{\index{\-Thief@{\-Thief}!take\-Damage@{take\-Damage}}
+\index{take\-Damage@{take\-Damage}!Thief@{\-Thief}}
+\subsubsection[{take\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thief\-::take\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_thief_a72790a2a46c3b7da0a67f49a5e3fc48a}
+\-This function lets this \hyperlink{class_thief}{\-Thief} player of type \hyperlink{class_unit}{\-Unit} take damage to itself. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating how much damage should be taken by the \hyperlink{class_thief}{\-Thief} player (how much the attribute \-Health will be decremented by). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_acf436602434c7aa33e9ace724dd48cf0}{\-Unit}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{thief_8h}{thief.\-h}\item 
+thief.\-cpp\end{DoxyCompactItemize}

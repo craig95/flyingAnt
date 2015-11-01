@@ -1,0 +1,131 @@
+\hypertarget{class_elemental}{\section{\-Elemental \-Class \-Reference}
+\label{class_elemental}\index{\-Elemental@{\-Elemental}}
+}
+
+
+\-A class for creating clones of a specific type of monster (elemental mob).  
+
+
+
+
+{\ttfamily \#include $<$elemental.\-h$>$}
+
+\-Inheritance diagram for \-Elemental\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_elemental}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_elemental_ab1c090ccbb2ac64d7cd65dbef999d9fb}{\-Elemental} ()
+\item 
+\hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_elemental_a8cfdf738ed7b5afb1e2f7c2fa3cdc717}{clone} ()
+\item 
+virtual void \hyperlink{class_elemental_a4fa7dc765efa64467ed460aad8c38459}{take\-Damage} (int)
+\item 
+bool \hyperlink{class_elemental_a5364d9096f513a1adb080b06741dadbb}{\-Move} (int, int, int, int)
+\item 
+void \hyperlink{class_elemental_a56083e462fc7ef72e876dcb91f7ed13e}{set\-Cell} (int, int, char)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for creating clones of a specific type of monster (elemental mob). 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating clones of the mob type \hyperlink{class_elemental}{\-Elemental}, as well as give the mob the ability to attack another player or take damage itself. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_elemental_ab1c090ccbb2ac64d7cd65dbef999d9fb}{\index{\-Elemental@{\-Elemental}!\-Elemental@{\-Elemental}}
+\index{\-Elemental@{\-Elemental}!Elemental@{\-Elemental}}
+\subsubsection[{\-Elemental}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Elemental\-::\-Elemental} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_elemental_ab1c090ccbb2ac64d7cd65dbef999d9fb}
+\-A constructor for setting the values from inherited attributes(from class Unit). 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_elemental_a8cfdf738ed7b5afb1e2f7c2fa3cdc717}{\index{\-Elemental@{\-Elemental}!clone@{clone}}
+\index{clone@{clone}!Elemental@{\-Elemental}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit} $\ast$ {\bf \-Elemental\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_elemental_a8cfdf738ed7b5afb1e2f7c2fa3cdc717}
+\-This function creates a clone of an \hyperlink{class_elemental}{\-Elemental} mob of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to an \hyperlink{class_elemental}{\-Elemental} mob of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_add809c0669cb6b08afae913da60c4cc1}{\-Unit}.
+
+\hypertarget{class_elemental_a5364d9096f513a1adb080b06741dadbb}{\index{\-Elemental@{\-Elemental}!\-Move@{\-Move}}
+\index{\-Move@{\-Move}!Elemental@{\-Elemental}}
+\subsubsection[{\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Elemental\-::\-Move} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_elemental_a5364d9096f513a1adb080b06741dadbb}
+\-This function creates calls another function in it to determine whether a player or mob can move or not. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A bool indicating whether the player/mob can move or not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{class_unit_a3a1ea72471b9effea5a5a24473025586}{\-Unit}.
+
+\hypertarget{class_elemental_a56083e462fc7ef72e876dcb91f7ed13e}{\index{\-Elemental@{\-Elemental}!set\-Cell@{set\-Cell}}
+\index{set\-Cell@{set\-Cell}!Elemental@{\-Elemental}}
+\subsubsection[{set\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Elemental\-::set\-Cell} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{class_elemental_a56083e462fc7ef72e876dcb91f7ed13e}
+\-This function calls another function to set a specific ceell in the map 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Four} & integers, initial x-\/ and y-\/coordinate, and the x-\/ and y-\/coordinate the player/mob wants to move to, and a char to indicate what that cell should be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing, the function is void. 
+\end{DoxyReturn}
+\hypertarget{class_elemental_a4fa7dc765efa64467ed460aad8c38459}{\index{\-Elemental@{\-Elemental}!take\-Damage@{take\-Damage}}
+\index{take\-Damage@{take\-Damage}!Elemental@{\-Elemental}}
+\subsubsection[{take\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Elemental\-::take\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_elemental_a4fa7dc765efa64467ed460aad8c38459}
+\-This function lets this \hyperlink{class_elemental}{\-Elemental} mob of type \hyperlink{class_unit}{\-Unit} take damage to itself. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & integer indicating how much damage should be taken by the \hyperlink{class_elemental}{\-Elemental} mob (how much the attribute \-Health will be decremented by). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_unit_acf436602434c7aa33e9ace724dd48cf0}{\-Unit}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{elemental_8h}{elemental.\-h}\item 
+elemental.\-cpp\end{DoxyCompactItemize}

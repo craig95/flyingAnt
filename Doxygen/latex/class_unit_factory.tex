@@ -1,0 +1,70 @@
+\hypertarget{class_unit_factory}{\section{\-Unit\-Factory \-Class \-Reference}
+\label{class_unit_factory}\index{\-Unit\-Factory@{\-Unit\-Factory}}
+}
+
+
+\-An abstract class for creating players/mobs of type \hyperlink{class_unit}{\-Unit}.  
+
+
+
+
+{\ttfamily \#include $<$unitfactory.\-h$>$}
+
+\-Inheritance diagram for \-Unit\-Factory\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unit_factory}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}{create\-Player} ()=0
+\item 
+virtual \hyperlink{class_unit}{\-Unit} $\ast$ \hyperlink{class_unit_factory_a4e24da648ac60377695a698b75be3d7a}{create\-Mob} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-An abstract class for creating players/mobs of type \hyperlink{class_unit}{\-Unit}. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239
+\end{DoxyAuthor}
+\hypertarget{class_unit_factory_Description}{}\subsection{\-Description}\label{class_unit_factory_Description}
+\-This class provides the functionality of creating players/mobs of type \hyperlink{class_unit}{\-Unit} . 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_unit_factory_a4e24da648ac60377695a698b75be3d7a}{\index{\-Unit\-Factory@{\-Unit\-Factory}!create\-Mob@{create\-Mob}}
+\index{create\-Mob@{create\-Mob}!UnitFactory@{\-Unit\-Factory}}
+\subsubsection[{create\-Mob}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-Unit}$\ast$ {\bf \-Unit\-Factory\-::create\-Mob} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_unit_factory_a4e24da648ac60377695a698b75be3d7a}
+\-This function creates a mob of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a mob of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_bludgeoning_factory_aaf360cac68f24499b432d8eaac411e12}{\-Bludgeoning\-Factory}, \hyperlink{class_magic_factory_a9cfbadc11ba1c80d8a8c43d060e24ca6}{\-Magic\-Factory}, and \hyperlink{class_piercing_factory_aec71380dc9ecb1cb4034fb8a898d1d45}{\-Piercing\-Factory}.
+
+\hypertarget{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}{\index{\-Unit\-Factory@{\-Unit\-Factory}!create\-Player@{create\-Player}}
+\index{create\-Player@{create\-Player}!UnitFactory@{\-Unit\-Factory}}
+\subsubsection[{create\-Player}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-Unit}$\ast$ {\bf \-Unit\-Factory\-::create\-Player} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}
+\-This function creates a player of type \hyperlink{class_unit}{\-Unit}. \begin{DoxyReturn}{\-Returns}
+\-A pointer to a player of type \hyperlink{class_unit}{\-Unit}. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{class_bludgeoning_factory_adb269785fcab1a468aabe771cf4f4336}{\-Bludgeoning\-Factory}, \hyperlink{class_magic_factory_a3021b979bd991e32e311c8869d500b46}{\-Magic\-Factory}, and \hyperlink{class_piercing_factory_a3a2f3736e85a5c4b0ad0160b1b34d796}{\-Piercing\-Factory}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unitfactory_8h}{unitfactory.\-h}\end{DoxyCompactItemize}

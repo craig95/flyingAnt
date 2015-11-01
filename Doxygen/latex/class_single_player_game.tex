@@ -1,0 +1,75 @@
+\hypertarget{class_single_player_game}{\section{\-Single\-Player\-Game \-Class \-Reference}
+\label{class_single_player_game}\index{\-Single\-Player\-Game@{\-Single\-Player\-Game}}
+}
+
+
+\-A class to easily setup and start a single player game.  
+
+
+
+
+{\ttfamily \#include $<$single\-Player\-Game.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_single_player_game_ac742023693fe3801eab7c1a964a92d82}{amount\-Damage} (int \&, char ch1, char ch2)
+\item 
+void \hyperlink{class_single_player_game_a825a10c7d72d23a91d82b23684dc1971}{setup\-Single\-Player\-Game} ()
+\item 
+void \hyperlink{class_single_player_game_a4cdb10883124feabd077fa4b723e1237}{start\-Game} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class to easily setup and start a single player game. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Craig van \-Heerden \-U15029779, \-Dedre \-Olwage \-U15015239 
+\end{DoxyAuthor}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_single_player_game_ac742023693fe3801eab7c1a964a92d82}{\index{\-Single\-Player\-Game@{\-Single\-Player\-Game}!amount\-Damage@{amount\-Damage}}
+\index{amount\-Damage@{amount\-Damage}!SinglePlayerGame@{\-Single\-Player\-Game}}
+\subsubsection[{amount\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Single\-Player\-Game\-::amount\-Damage} (
+\begin{DoxyParamCaption}
+\item[{int \&}]{damage, }
+\item[{char}]{ch1, }
+\item[{char}]{ch2}
+\end{DoxyParamCaption}
+)}}\label{class_single_player_game_ac742023693fe3801eab7c1a964a92d82}
+\-This function returns determines which \hyperlink{class_unit}{\-Unit} (player or mob) should take damage and how each of them should deal damage. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-An} & reference to either the player/mobs health value, and two chars containing the player/mobs descriptions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-An integer indicating how much damage should be taken by the player/mob itself. 
+\end{DoxyReturn}
+\hypertarget{class_single_player_game_a825a10c7d72d23a91d82b23684dc1971}{\index{\-Single\-Player\-Game@{\-Single\-Player\-Game}!setup\-Single\-Player\-Game@{setup\-Single\-Player\-Game}}
+\index{setup\-Single\-Player\-Game@{setup\-Single\-Player\-Game}!SinglePlayerGame@{\-Single\-Player\-Game}}
+\subsubsection[{setup\-Single\-Player\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Single\-Player\-Game\-::setup\-Single\-Player\-Game} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_single_player_game_a825a10c7d72d23a91d82b23684dc1971}
+\-This function is used to set up the game. \begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+\hypertarget{class_single_player_game_a4cdb10883124feabd077fa4b723e1237}{\index{\-Single\-Player\-Game@{\-Single\-Player\-Game}!start\-Game@{start\-Game}}
+\index{start\-Game@{start\-Game}!SinglePlayerGame@{\-Single\-Player\-Game}}
+\subsubsection[{start\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Single\-Player\-Game\-::start\-Game} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_single_player_game_a4cdb10883124feabd077fa4b723e1237}
+\-This function is used to start the game and run the game loop \begin{DoxyReturn}{\-Returns}
+\-Nothing is returned (function is void). 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{single_player_game_8h}{single\-Player\-Game.\-h}\item 
+single\-Player\-Game.\-cpp\end{DoxyCompactItemize}
